@@ -1,0 +1,23 @@
+aside.side-bar {
+  @apply flex flex-col items-center bg-neutral-100 w-0 overflow-y-scroll h-full duration-1000 overflow-x-clip;
+
+  .tree-nav,
+  .logo {
+    @apply min-w-max;
+  }
+
+  > header.header {
+    @apply w-full flex justify-between items-center p-4 sticky top-0 backdrop-blur-lg;
+  }
+
+  .tree-nav {
+    @apply w-72 -mx-4 px-4;
+  }
+  .distance { @apply h-8; }
+
+  > a  { @apply border-t border-dotted my-3 py-1 min-w-max px-6 text-sm font-extralight text-gray-400; }
+
+  &.open {
+    @apply w-72 -left-72;
+  }
+}

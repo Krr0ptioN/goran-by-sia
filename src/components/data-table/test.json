@@ -1,0 +1,1455 @@
+{
+  "ledger": [
+    {
+      "code": 1,
+      "type": "ASSET",
+      "name": "Assets",
+      "description": "Assets"
+    },
+    {
+      "code": 2,
+      "type": "LIABILITY",
+      "name": "Liabilities",
+      "description": "Liabilities"
+    },
+    {
+      "code": 3,
+      "type": "EQUITY",
+      "name": "Stock and Equity",
+      "description": ""
+    },
+    {
+      "code": 4,
+      "type": "INCOME",
+      "name": "Incomes",
+      "description": ""
+    },
+    {
+      "code": 5,
+      "type": "EXPENSE",
+      "name": "Expenses",
+      "description": "Expenses represent the costs incurred by a business in its day-to-day operations and are subtracted from revenues to determine profitability."
+    },
+    {
+      "code": 11,
+      "type": "ASSET",
+      "name": "Current Assets",
+      "description": "Current Assets",
+      "parent": 1
+    },
+    {
+      "code": 12,
+      "type": "ASSET",
+      "name": "Fixed Assets",
+      "description": "Non-Current Assets",
+      "parent": 1
+    },
+    {
+      "code": 111,
+      "type": "ASSET",
+      "name": "Cash",
+      "icon": "Banknotes",
+      "description": "Cash in Wallet",
+      "parent": 11
+    },
+    {
+      "code": 112,
+      "type": "ASSET",
+      "name": "Checking Account",
+      "icon": "CreditCard",
+      "description": "Bank ",
+      "parent": 11
+    },
+    {
+      "code": 113,
+      "type": "ASSET",
+      "name": "Loan",
+      "icon": "ReceiptPercent",
+      "description": "Paid loans",
+      "parent": 11
+    },
+    {
+      "code": 114,
+      "type": "ASSET",
+      "name": "Accounts Receivable",
+      "icon": "ReceiptRefund",
+      "description": "debtors",
+      "parent": 11
+    },
+    {
+      "code": 115,
+      "type": "ASSET",
+      "name": "Short-Term Investments",
+      "icon": "ArrowTrendingUp",
+      "description": "short term investments",
+      "parent": 11
+    },
+    {
+      "code": 119,
+      "type": "ASSET",
+      "name": "Other Current Assets",
+      "icon": "ClipboardDocumentList",
+      "description": "other",
+      "parent": 11
+    },
+    {
+      "code": 121,
+      "type": "ASSET",
+      "name": "PPE",
+      "description": "Property, Plant, and Equipment",
+      "icon": "Home",
+      "parent": 12
+    },
+    {
+      "code": 122,
+      "type": "ASSET",
+      "name": "Intangible Assets",
+      "icon": "LightBulb",
+      "description": "patents, copyrights, trademarks",
+      "parent": 12
+    },
+    {
+      "code": 123,
+      "type": "ASSET",
+      "name": "Investments",
+      "description": "stocks, bonds, long-term holdings",
+      "icon": "PresentationChartLine",
+      "parent": 12
+    },
+    {
+      "code": 124,
+      "type": "ASSET",
+      "name": "Other Non-Current Assets",
+      "description": "Other Non-Current Assets",
+      "parent": 12,
+      "icon": "ClipboardDocumentList"
+    },
+    {
+      "code": 21,
+      "type": "LIABILITY",
+      "name": "Current Liabilities",
+      "description": "Current Liabilities",
+      "parent": 2
+    },
+    {
+      "code": 22,
+      "type": "LIABILITY",
+      "name": "Fixed Liabilities",
+      "description": "Non-Current Liabilities",
+      "parent": 2
+    },
+    {
+      "code": 211,
+      "type": "LIABILITY",
+      "name": "Accounts Payable",
+      "description": "Accounts Payable",
+      "parent": 21
+    },
+    {
+      "code": 212,
+      "type": "LIABILITY",
+      "name": "Short-Term Loans Payable",
+      "parent": 21
+    },
+    {
+      "code": 213,
+      "type": "LIABILITY",
+      "name": "Accrued Liabilities",
+      "parent": 21
+    },
+    {
+      "code": 214,
+      "type": "LIABILITY",
+      "name": "Deferred Revenue",
+      "parent": 21
+    },
+    {
+      "code": 215,
+      "type": "LIABILITY",
+      "name": "Other Current Liabilities",
+      "parent": 21
+    },
+    {
+      "code": 221,
+      "type": "LIABILITY",
+      "name": "Long-Term Loans Payable",
+      "parent": 22
+    },
+    {
+      "code": 222,
+      "type": "LIABILITY",
+      "name": "Lease Liabilities",
+      "icon": "Key",
+      "parent": 22
+    },
+    {
+      "code": 223,
+      "type": "LIABILITY",
+      "name": "Other Non-Current Liabilities",
+      "parent": 22
+    },
+    {
+      "code": 31,
+      "type": "EQUITY",
+      "name": "Owner's Equity",
+      "description": "In a sole proprietorship, the initial investment from the owner is often recorded as \"Owner's Equity.\" You can create an account such as \"Owner's Initial Investment\" or \"Owner's Capital\" to track the amount contributed by the owner.",
+      "parent": 3
+    },
+    {
+      "code": 32,
+      "type": "EQUITY",
+      "name": "Profit/Loss",
+      "parent": 3
+    },
+    {
+      "code": 33,
+      "type": "EQUITY",
+      "name": "Additional Equity Accounts",
+      "description": "Additional Equity Accounts (for any other equity accounts specific to your organization, such as capital reserves or special purpose equity)",
+      "parent": 3
+    },
+    {
+      "code": 311,
+      "type": "EQUITY",
+      "name": "Owner's Equity In Cash",
+      "parent": 31
+    },
+    {
+      "code": 312,
+      "type": "EQUITY",
+      "name": "Owner's Equity In Bank",
+      "parent": 31
+    },
+    {
+      "code": 313,
+      "type": "EQUITY",
+      "name": "Owner's Equity In Stock",
+      "parent": 31
+    },
+    {
+      "code": 321,
+      "type": "EQUITY",
+      "name": "Current Year Profit/Loss",
+      "parent": 32
+    },
+    {
+      "code": 322,
+      "type": "EQUITY",
+      "name": "Special Profit/Loss",
+      "parent": 32
+    },
+    {
+      "code": 331,
+      "type": "EQUITY",
+      "name": "Other equity & stocks",
+      "parent": 33
+    },
+    {
+      "code": 41,
+      "type": "INCOME",
+      "name": "Earned Income",
+      "description": "Income from active work or efforts.",
+      "parent": 4
+    },
+    {
+      "code": 42,
+      "type": "INCOME",
+      "name": "Passive Income",
+      "description": "Income generated with minimal active involvement.",
+      "parent": 4
+    },
+    {
+      "code": 43,
+      "type": "INCOME",
+      "name": "Portfolio Income",
+      "description": "Income from investments and capital gains.",
+      "parent": 4
+    },
+    {
+      "code": 49,
+      "type": "INCOME",
+      "name": "Other Income",
+      "description": "Any income not covered by the above categories.",
+      "parent": 4
+    },
+    {
+      "code": 411,
+      "type": "INCOME",
+      "name": "Salary",
+      "icon": "CurrencyDollar",
+      "description": "Regular income from employment.",
+      "parent": 41
+    },
+    {
+      "code": 412,
+      "type": "INCOME",
+      "name": "Freelance Income",
+      "icon": "CircleStack",
+      "description": "Earnings from freelance or contract work.",
+      "parent": 41
+    },
+    {
+      "code": 421,
+      "type": "INCOME",
+      "name": "Investment Income",
+      "icon": "PresentationChartLine",
+      "description": "Earnings from investments like dividends and interest.",
+      "parent": 42
+    },
+    {
+      "code": 431,
+      "type": "INCOME",
+      "name": "Dividends",
+      "icon": "ChartPie",
+      "description": "Earnings from dividend-paying investments.",
+      "parent": 43
+    },
+    {
+      "code": 432,
+      "type": "INCOME",
+      "name": "Interest",
+      "icon": "ReceiptPercent",
+      "description": "Earnings from interest-bearing investments.",
+      "parent": 43
+    },
+    {
+      "code": 433,
+      "type": "INCOME",
+      "name": "Capital Gains",
+      "description": "Capital Gains (from the sale of investments): Profits from selling investments.",
+      "parent": 43
+    },
+    {
+      "code": 491,
+      "type": "INCOME",
+      "name": "Other Income",
+      "icon": "EllipsisHorizontalCircle",
+      "description": "Miscellaneous or one-time sources of income.",
+      "parent": 49
+    },
+    {
+      "code": 51,
+      "type": "EXPENSE",
+      "name": "Housing Expenses",
+      "icon": "HomeModern",
+      "parent": 5
+    },
+    {
+      "code": 52,
+      "type": "EXPENSE",
+      "name": "Transportation Expenses",
+      "icon": "Truck",
+      "parent": 5
+    },
+    {
+      "code": 53,
+      "type": "EXPENSE",
+      "icon": "ShoppingCart",
+      "name": "Groceries and Household",
+      "parent": 5
+    },
+    {
+      "code": 54,
+      "type": "EXPENSE",
+      "icon": "EyeDropper",
+      "name": "Healthcare",
+      "parent": 5
+    },
+    {
+      "code": 55,
+      "type": "EXPENSE",
+      "name": "Entertainment",
+      "icon": "Cake",
+      "parent": 5
+    },
+    {
+      "code": 56,
+      "type": "EXPENSE",
+      "name": "Education",
+      "icon": "AcademicCap",
+      "parent": 5
+    },
+    {
+      "code": 57,
+      "type": "EXPENSE",
+      "name": "Insurance",
+      "icon": "ShieldCheck",
+      "parent": 5
+    },
+    {
+      "code": 58,
+      "type": "EXPENSE",
+      "name": "Taxes",
+      "icon": "Scale",
+      "parent": 5
+    },
+    {
+      "code": 59,
+      "type": "EXPENSE",
+      "name": "Miscellaneous Expenses",
+      "icon": "EllipsisHorizontalCircle",
+      "parent": 5
+    },
+    {
+      "code": 511,
+      "type": "EXPENSE",
+      "name": "Rent",
+      "icon": "BuildingOffice",
+      "parent": 51
+    },
+    {
+      "code": 512,
+      "type": "EXPENSE",
+      "name": "Electricity",
+      "icon": "Bolt",
+      "parent": 51
+    },
+    {
+      "code": 513,
+      "type": "EXPENSE",
+      "name": "Water",
+      "icon": "Beaker",
+      "parent": 51
+    },
+    {
+      "code": 514,
+      "type": "EXPENSE",
+      "name": "Internet and Cable",
+      "icon": "Wifi",
+      "parent": 51
+    },
+    {
+      "code": 521,
+      "type": "EXPENSE",
+      "name": "Bike",
+      "parent": 52
+    },
+    {
+      "code": 522,
+      "type": "EXPENSE",
+      "name": "Public transportation",
+      "icon": "Ticket",
+      "parent": 52
+    },
+    {
+      "code": 523,
+      "type": "EXPENSE",
+      "name": "Train",
+      "parent": 52
+    },
+    {
+      "code": 524,
+      "type": "EXPENSE",
+      "name": "Airport",
+      "icon": "Ticket",
+      "parent": 52
+    },
+    {
+      "code": 525,
+      "type": "EXPENSE",
+      "name": "Taxi",
+      "parent": 52
+    },
+    {
+      "code": 531,
+      "type": "EXPENSE",
+      "name": "Groceries",
+      "icon": "ShoppingCart",
+      "parent": 53
+    },
+    {
+      "code": 532,
+      "type": "EXPENSE",
+      "name": "Cleaning Supplies",
+      "icon": "Trash",
+      "parent": 53
+    },
+    {
+      "code": 533,
+      "type": "EXPENSE",
+      "name": "Personal Care Products",
+      "icon": "Sparkles",
+      "parent": 53
+    },
+    {
+      "code": 534,
+      "type": "EXPENSE",
+      "name": "Office Supplies",
+      "icon": "PaperClip",
+      "parent": 53
+    },
+    {
+      "code": 541,
+      "type": "EXPENSE",
+      "name": "Medical Expenses",
+      "icon": "Lifebuoy",
+      "parent": 54
+    },
+    {
+      "code": 542,
+      "type": "EXPENSE",
+      "name": "Health Insurance Premiums",
+      "parent": 54
+    },
+    {
+      "code": 543,
+      "type": "EXPENSE",
+      "name": "Gym Memberships",
+      "description": "Gym Memberships and Health-related Expenses",
+      "parent": 54
+    },
+    {
+      "code": 551,
+      "type": "EXPENSE",
+      "name": "Streaming",
+      "icon": "MusicalNote",
+      "parent": 55
+    },
+    {
+      "code": 552,
+      "type": "EXPENSE",
+      "name": "Music & Movies",
+      "icon": "Film",
+      "parent": 55
+    },
+    {
+      "code": 553,
+      "type": "EXPENSE",
+      "name": "Sports and Recreation",
+      "parent": 55
+    },
+    {
+      "code": 554,
+      "type": "EXPENSE",
+      "name": "Gifts",
+      "icon": "Gift",
+      "parent": 55
+    },
+    {
+      "code": 555,
+      "type": "EXPENSE",
+      "name": "Eating Out",
+      "icon": "Cake",
+      "parent": 55
+    },
+    {
+      "code": 556,
+      "type": "EXPENSE",
+      "name": "Charity",
+      "icon": "Heart",
+      "parent": 55
+    },
+    {
+      "code": 557,
+      "type": "EXPENSE",
+      "name": "Painting/Photography",
+      "icon": "PaintBrush",
+      "parent": 55
+    },
+    {
+      "code": 558,
+      "type": "EXPENSE",
+      "name": "Clubs/Festivals",
+      "Icon": "Megaphone",
+      "parent": 55
+    },
+    {
+      "code": 559,
+      "type": "EXPENSE",
+      "name": "Dining/Drink",
+      "parent": 55
+    },
+    {
+      "code": 561,
+      "type": "EXPENSE",
+      "name": "Books",
+      "icon": "BookOpen",
+      "parent": 56
+    },
+    {
+      "code": 562,
+      "type": "EXPENSE",
+      "name": "Language",
+      "Icon": "Language",
+      "parent": 56
+    },
+    {
+      "code": 563,
+      "type": "EXPENSE",
+      "name": "Driving",
+      "icon": "ExclamationTriangle",
+      "parent": 56
+    },
+    {
+      "code": 571,
+      "type": "EXPENSE",
+      "name": "Public Insurance",
+      "parent": 57
+    },
+    {
+      "code": 572,
+      "type": "EXPENSE",
+      "name": "Private Insurance",
+      "parent": 57
+    },
+    {
+      "code": 581,
+      "type": "EXPENSE",
+      "name": "Income Tax",
+      "parent": 58
+    },
+    {
+      "code": 591,
+      "type": "EXPENSE",
+      "name": "Exchange Fee",
+      "parent": 59
+    },
+    {
+      "code": 592,
+      "type": "EXPENSE",
+      "name": "Transfer Fee",
+      "parent": 59
+    }
+  ],
+  "account": [
+    {
+      "code": "ARYA",
+      "name": "Arya Farkhondeh",
+      "type": "Person",
+      "email": "arya.farkhondeh@gmail.com",
+      "address": {
+        "country": "SZ",
+        "addresss": "",
+        "additional": "",
+        "city": "Martigny",
+        "zip": "1920",
+        "address": "Rue des Pres-Aubert 3"
+      },
+      "targets": [113, 114, 211, 212, 222, 412, 491, 511, 554]
+    },
+    {
+      "code": "AUTO",
+      "name": "Driving License",
+      "type": "CostCenter",
+      "description": "",
+      "address": {
+        "country": "",
+        "addresss": "",
+        "additional": "",
+        "city": "",
+        "zip": ""
+      },
+      "targets": [522]
+    },
+    {
+      "code": "CASH",
+      "name": "Main Wallet",
+      "type": "Asset",
+      "assetType": "Currency",
+      "targets": [111]
+    },
+    {
+      "code": "DB-BERLIN",
+      "name": "Main Bank Account",
+      "type": "BankAccount",
+      "accountType": "SavingAccount",
+      "accountNo": "701-0203570-00",
+      "identifier": {
+        "IBAN": "",
+        "SWIFT": "",
+        "iban": "DE80 1007 0124 0020 3570 00",
+        "swift": "DEUTDEDB101"
+      },
+      "targets": [
+        112, 113, 114, 115, 119, 221, 312, 431, 432, 491, 581, 591, 592
+      ],
+      "bank": "DeutscheBank"
+    },
+    {
+      "code": "DE-B1",
+      "name": "Learning German B1",
+      "type": "CostCenter",
+      "description": "",
+      "address": {
+        "country": "",
+        "addresss": "",
+        "additional": "",
+        "city": "",
+        "zip": ""
+      },
+      "targets": [
+        511, 512, 513, 514, 521, 522, 523, 524, 525, 531, 532, 533, 541, 542,
+        543, 551, 552, 553, 554, 555, 556, 557, 558, 559
+      ]
+    },
+    {
+      "code": "DKB",
+      "name": "Backup Account DKB",
+      "type": "BankAccount",
+      "accountType": "SavingAccount",
+      "accountNo": "Girokonto",
+      "identifier": {
+        "IBAN": "",
+        "SWIFT": "",
+        "iban": "DE03120300001082793231",
+        "swift": "BYLADEM1001"
+      },
+      "targets": [112],
+      "bank": "DKB"
+    },
+    {
+      "code": "DNTL",
+      "name": "Dental Costs",
+      "type": "CostCenter",
+      "description": "",
+      "address": {
+        "country": "",
+        "addresss": "",
+        "additional": "",
+        "city": "",
+        "zip": ""
+      },
+      "targets": [541]
+    },
+    {
+      "code": "EQ-INIT",
+      "name": "Opening Equity",
+      "type": "Equity",
+      "targets": [311, 313, 312, 321, 331, 322]
+    },
+    {
+      "code": "EURM",
+      "name": "Euro - Mansour",
+      "type": "Asset",
+      "assetType": "Currency",
+      "targets": [111]
+    },
+    {
+      "code": "MNSR",
+      "name": "Mansour Maroufi",
+      "type": "Person",
+      "email": "",
+      "address": {
+        "country": "KU",
+        "addresss": "",
+        "additional": "",
+        "city": "Mahabad",
+        "zip": "100001",
+        "address": "Istgah 7,  zaminhay shahrdari"
+      },
+      "targets": [114, 211, 554]
+    },
+    {
+      "code": "MRDN",
+      "name": "Mardin Nasuti",
+      "type": "Person",
+      "email": "maridnnasuti@gmail.com",
+      "address": {
+        "country": "TR",
+        "addresss": "",
+        "additional": "",
+        "city": "Istanbul",
+        "zip": ""
+      },
+      "targets": [114, 211]
+    },
+    {
+      "code": "N26",
+      "name": "N26 Account",
+      "type": "BankAccount",
+      "accountType": "OnlineAccount",
+      "accountNo": "Main Account",
+      "identifier": {
+        "IBAN": "",
+        "SWIFT": "",
+        "iban": "DE34 1001 1001 2628 6283 92",
+        "swift": "NTSBDEB1XXX"
+      },
+      "targets": [112],
+      "bank": "N26"
+    },
+    {
+      "code": "NSRA",
+      "name": "Nasser Abbassi",
+      "type": "Person",
+      "email": "",
+      "address": {
+        "country": "DE",
+        "addresss": "",
+        "additional": "39",
+        "city": "Mannheim",
+        "zip": "35398",
+        "address": "Bruder-Grimm-str"
+      },
+      "targets": [114, 211, 554, 412]
+    },
+    {
+      "code": "OSTD",
+      "name": "Ostadan 42",
+      "type": "Asset",
+      "assetType": "RealAssets",
+      "targets": [121]
+    },
+    {
+      "code": "RVLT",
+      "name": "Revolut EUR",
+      "type": "BankAccount",
+      "accountType": "OnlineAccount",
+      "accountNo": "EURO",
+      "identifier": {
+        "IBAN": "",
+        "SWIFT": "",
+        "iban": "LT11 3250 0566 6432 8657",
+        "swift": "REVOLT21"
+      },
+      "targets": [112],
+      "bank": "Revolut"
+    },
+    {
+      "code": "SAFE",
+      "name": "Main Volut",
+      "type": "Asset",
+      "assetType": "Currency",
+      "targets": [111]
+    },
+    {
+      "code": "SOLY",
+      "name": "Soleiman Marouf",
+      "type": "Person",
+      "email": "smaroufi@gmail.com",
+      "address": {
+        "country": "DE",
+        "addresss": "",
+        "additional": "",
+        "city": "Berlin",
+        "zip": ""
+      },
+      "targets": [114, 211, 554]
+    },
+    {
+      "code": "VRWY",
+      "name": "Verwey Gmbh",
+      "type": "Business",
+      "businessType": "Generic",
+      "address": {
+        "country": "DE",
+        "addresss": "",
+        "additional": "",
+        "city": "Berlin",
+        "zip": "D-12209",
+        "address": " Mariannenstr. 38"
+      },
+      "targets": [
+        513, 551, 552, 553, 555, 556, 557, 558, 559, 561, 562, 563, 571, 572,
+        581, 591, 592, 511
+      ]
+    },
+    {
+      "code": "VTFL",
+      "name": "Vattenfall Wärme Berlin AG",
+      "type": "Business",
+      "businessType": "Generic",
+      "address": {
+        "country": "DE",
+        "addresss": "",
+        "additional": "",
+        "city": "Berlin",
+        "zip": "10317",
+        "address": "Köpenicker Ch 42"
+      },
+      "targets": [512]
+    },
+    {
+      "code": "ZAL",
+      "name": "Zalando Gmbh",
+      "type": "Business",
+      "businessType": "Merchant",
+      "address": {
+        "country": "DE",
+        "addresss": "",
+        "additional": "",
+        "city": "Berlin",
+        "zip": "10243",
+        "address": "Hedwig-Wachenheim-Straße 7"
+      },
+      "targets": [312, 313, 411, 421, 431, 432, 433, 311, 581]
+    }
+  ],
+  "transaction": [
+    {
+      "at": "2023-08-26T16:39:48.726Z",
+      "title": "Payment 42.1",
+      "description": "",
+      "id": 1708187988726,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 121,
+          "account": "OSTD",
+          "amount": 8571.42857142857
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 8571.42857142857
+        }
+      ],
+      "total": 8571.42857142857
+    },
+    {
+      "at": "2023-09-02T16:40:55.892Z",
+      "title": "Arya",
+      "description": "Sending money to Arya's family",
+      "id": 1708188055892,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 300
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "ARYA",
+          "amount": 300
+        }
+      ],
+      "total": 300
+    },
+    {
+      "at": "2023-09-03T16:43:49.211Z",
+      "title": "Mardin",
+      "description": "Mardin's paybak for unitversity",
+      "id": 1708188229211,
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 70.2857142857143
+        }
+      ],
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MRDN",
+          "amount": 70.2857142857143
+        }
+      ],
+      "total": 70.2857142857143
+    },
+    {
+      "at": "2023-09-05T16:49:07.129Z",
+      "title": "Via Abbas Dehghan",
+      "description": "Transer from Mansour vis Abbas Dehghan",
+      "id": 1708188547129,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 400
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 112,
+          "account": "N26",
+          "amount": 400
+        }
+      ],
+      "total": 400
+    },
+    {
+      "at": "2023-09-07T17:19:05.608Z",
+      "title": "Mardin Uni",
+      "description": "Mardin's university payback",
+      "id": 1708190345608,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MRDN",
+          "amount": 115.619047619048
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 115.619047619048
+        }
+      ],
+      "total": 115.619047619048
+    },
+    {
+      "at": "2023-09-08T17:27:18.430Z",
+      "title": "Via Zahara Del Azar",
+      "description": "Transfer from Mansour",
+      "id": 1708190838430,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 1200
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 112,
+          "account": "RVLT",
+          "amount": 1200
+        }
+      ],
+      "total": 1200
+    },
+    {
+      "at": "2023-09-09T17:31:33.460Z",
+      "title": "via Mojtaba Fatahi",
+      "description": "Mojtaba Fatahi - In cash, East side gallery",
+      "id": 1708191093460,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 1500
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 111,
+          "account": "SAFE",
+          "amount": 1500
+        }
+      ],
+      "total": 1500
+    },
+    {
+      "at": "2023-09-11T17:32:56.943Z",
+      "title": "Arya",
+      "description": "Sending money to Arya's Family",
+      "id": 1708191176943,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 157.998683344305
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "ARYA",
+          "amount": 157.998683344305
+        }
+      ],
+      "total": 157.998683344305
+    },
+    {
+      "at": "2023-09-15T17:35:36.273Z",
+      "title": "via Alireza Bakhtiyari",
+      "description": "(Cheraghi)",
+      "id": 1708191336273,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 1000
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 112,
+          "account": "RVLT",
+          "amount": 1000
+        }
+      ],
+      "total": 1000
+    },
+    {
+      "at": "2023-09-17T17:36:14.038Z",
+      "title": "Soleiman P1",
+      "description": "",
+      "id": 1708191374038,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 300
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "SOLY",
+          "amount": 300
+        }
+      ],
+      "total": 300
+    },
+    {
+      "at": "2023-09-18T17:38:03.474Z",
+      "title": "via Alireza Bakhtiyari",
+      "description": "(Cheraghi)",
+      "id": 1708191483474,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 400
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 112,
+          "account": "RVLT",
+          "amount": 400
+        }
+      ],
+      "total": 400
+    },
+    {
+      "at": "2023-09-19T17:40:05.855Z",
+      "title": "via Niloofar",
+      "description": "(Alireza Kamyabi)",
+      "id": 1708191605855,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 666.666666666667
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 112,
+          "account": "N26",
+          "amount": 666.666666666667
+        }
+      ],
+      "total": 666.666666666667
+    },
+    {
+      "at": "2023-09-20T17:48:24.103Z",
+      "title": "via Parviz",
+      "description": "(Tohid Makari Vayghan)",
+      "id": 1708192104103,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 2000
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 112,
+          "account": "DKB",
+          "amount": 2000
+        }
+      ],
+      "total": 2000
+    },
+    {
+      "at": "2023-09-20T17:48:58.169Z",
+      "title": "via Arya",
+      "description": "Arya",
+      "id": 1708192138169,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 300
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "ARYA",
+          "amount": 300
+        }
+      ],
+      "total": 300
+    },
+    {
+      "at": "2023-09-30T17:49:39.085Z",
+      "title": "Soleiman Ext",
+      "description": "Soleiman extra payment",
+      "id": 1708192179085,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 100
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "SOLY",
+          "amount": 100
+        }
+      ],
+      "total": 100
+    },
+    {
+      "at": "2023-10-05T17:50:12.886Z",
+      "title": "Arya",
+      "description": "Arya",
+      "id": 1708192212886,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 400
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "ARYA",
+          "amount": 400
+        }
+      ],
+      "total": 400
+    },
+    {
+      "at": "2023-10-13T17:51:30.218Z",
+      "title": "Payment42.2",
+      "description": "Receving second part of the Ostadan.",
+      "id": 1708192290218,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 121,
+          "account": "OSTD",
+          "amount": 1912.55785487511
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 1912.55785487511
+        }
+      ],
+      "total": 1912.55785487511
+    },
+    {
+      "at": "2023-10-14T17:52:31.469Z",
+      "title": "Soleiman P2",
+      "description": "Soleiman P2",
+      "id": 1708192351469,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 300
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "SOLY",
+          "amount": 300
+        }
+      ],
+      "total": 300
+    },
+    {
+      "at": "2023-10-14T17:53:24.119Z",
+      "title": "Mardin",
+      "description": "Mardin Uni payback",
+      "id": 1708192404119,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MRDN",
+          "amount": 192
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 192
+        }
+      ],
+      "total": 192
+    },
+    {
+      "at": "2023-10-14T17:56:22.352Z",
+      "title": "Buyig Euros - CASH",
+      "description": "Mansour Buying Euros for me, and keeping them in his Safe.",
+      "id": 1708192582352,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 1000
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 111,
+          "account": "EURM",
+          "amount": 1000
+        }
+      ],
+      "total": 1000
+    },
+    {
+      "at": "2023-11-08T18:00:09.619Z",
+      "title": "Soleiman P3",
+      "description": "Soleiman P3",
+      "id": 1708192809619,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 200
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "SOLY",
+          "amount": 200
+        }
+      ],
+      "total": 200
+    },
+    {
+      "at": "2023-11-08T18:01:16.935Z",
+      "title": "Soleiman P4",
+      "description": "Soleiman P4",
+      "id": 1708192876935,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 300
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "SOLY",
+          "amount": 300
+        }
+      ],
+      "total": 300
+    },
+    {
+      "at": "2023-11-29T18:02:14.101Z",
+      "title": "Mardin",
+      "description": "Mardin Uni Payback",
+      "id": 1708192934101,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 114,
+          "account": "MRDN",
+          "amount": 109.489051094891
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "MNSR",
+          "amount": 109.489051094891
+        }
+      ],
+      "total": 109.489051094891
+    },
+    {
+      "at": "2023-12-03T18:03:55.450Z",
+      "title": "Soleiman P5",
+      "description": "Soleiman P5",
+      "id": 1708193035450,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 111,
+          "account": "EURM",
+          "amount": 272.148338987971
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 114,
+          "account": "SOLY",
+          "amount": 272.148338987971
+        }
+      ],
+      "total": 272.148338987971
+    },
+    {
+      "at": "2023-01-01T21:58:45.493Z",
+      "title": "Opening Statement",
+      "description": "Inital statement",
+      "id": 1672531200000,
+      "credit": [
+        {
+          "id": 1,
+          "ledger": 331,
+          "account": "EQ-INIT",
+          "amount": 10483.99
+        }
+      ],
+      "debit": [
+        {
+          "id": 2,
+          "ledger": 121,
+          "account": "OSTD",
+          "amount": 10483.99
+        }
+      ],
+      "total": 10483.99
+    }
+  ]
+}

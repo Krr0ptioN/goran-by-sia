@@ -1,0 +1,64 @@
+.home.page {
+    @apply flex flex-col overflow-hidden;
+
+    > .content {
+        @apply flex flex-row overflow-hidden flex-1;
+        .outlet {
+            @apply flex flex-col flex-1 h-full w-full border-l overflow-auto bg-white;
+
+            .page {@apply bg-white;}
+        }
+
+        .page-header {
+            @apply flex sticky top-0 z-50 backdrop-blur-lg p-6;
+
+            > div.nav {
+                @apply flex gap-1;
+
+                button.icon {
+                    @apply rounded-full p-1 bg-neutral-100 items-center justify-center;
+
+                    &:hover { @apply bg-neutral-200; }
+                    &:active { @apply bg-neutral-300; }
+
+                    .icon { @apply h-5 stroke-[1.5]; }
+                }
+            }
+
+            > div.user-menu {
+                @apply h-6 flex bg-neutral-100 items-center rounded-full;
+                img   { @apply h-6 rounded-full; }
+                label { @apply text-sm mx-2; }
+                .icon { @apply h-3 stroke-2 me-2;}
+            }
+        }
+
+        .main-sidebar-footer {
+            @apply p-6 w-full flex items-center;
+            a { @apply w-full; }
+            button { @apply w-full justify-start px-1 text-zinc-600 hover:text-zinc-900; }
+        }
+    }
+}
+
+
+progress {
+    color: darkmagenta;
+    /* Firefox: Unfilled portion of the progress bar */
+    background: lightgrey;
+}
+
+/* Firefox: Filled portion of the progress bar */
+progress::-moz-progress-bar {
+    background: currentColor;
+}
+
+/* Chrome & Safari: Unfilled portion of the progress bar */
+progress::-webkit-progress-bar {
+    background: lightgrey;
+}
+
+/* Chrome & Safari: Filled portion of the progress bar */
+progress::-webkit-progress-value {
+    background: currentColor;
+}

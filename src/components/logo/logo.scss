@@ -1,0 +1,19 @@
+
+@keyframes borderColor {
+  from { @apply border-neutral-100   }
+  to { @apply border-neutral-100/60  }
+}
+
+
+.logo {
+  @apply flex justify-center items-center gap-3 p-6  ;
+
+  span {
+    @apply text-primary text-2xl font-light;
+  }
+
+  .icon {
+    @apply text-neutral-100 bg-primary/90 size-10 rounded-full p-2 border-4 ;
+    animation: borderColor 1s infinite alternate;
+  }
+}

@@ -1,0 +1,20 @@
+.dashboard-page {
+    @apply flex flex-col px-6 gap-12;
+
+    > section {
+        > h1 { @apply sticky top-0 font-bold text-2xl pt-3 pb-6; }
+    }
+
+
+    ul.music-list {
+        @apply flex gap-2 flex-wrap;
+        li {
+            @apply flex flex-col cursor-pointer bg-neutral-100 hover:bg-neutral-50 w-48 p-4;
+
+            h1 { @apply text-lg font-bold mt-2; }
+            span { @apply text-gray-500; }
+
+        }
+    }
+
+}

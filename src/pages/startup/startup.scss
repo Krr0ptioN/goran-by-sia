@@ -1,0 +1,20 @@
+.page.startup {
+  @apply items-start bg-cover p-16 bg-primary/10;
+}
+
+form {
+  @apply my-auto p-3 w-[30em] max-w-full;
+
+  input.input {
+    @apply px-3 py-2;
+  }
+
+  footer.form-footer {
+    p.links {
+      @apply flex justify-between text-sm mt-3;
+      a:hover {
+        @apply underline;
+      }
+    }
+  }
+}

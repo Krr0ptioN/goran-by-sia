@@ -1,0 +1,14 @@
+.accounting-value {
+  @apply font-semibold;
+
+  &.debit {
+    @apply text-rose-600;
+  }
+  &.credit {
+    @apply text-green-600;
+  }
+}
+
+.money-value {
+  @apply font-semibold;
+}

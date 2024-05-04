@@ -1,0 +1,40 @@
+input.input,
+textarea.input {
+  @apply flex w-full rounded-md border border-input bg-background px-3  text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50;
+
+  &[type='number'] {
+    @apply pe-0 w-auto;
+  }
+
+  &:read-only {
+    @apply bg-neutral-100 font-bold;
+  }
+
+  &:focus-visible {
+    @apply outline-none ring-2 ring-ring;
+  }
+}
+
+textarea.input {
+  @apply px-2 py-1;
+}
+
+.money-input {
+  @apply flex items-center relative;
+
+  input {
+    @apply p-2 ps-10 font-extralight text-end text-transparent;
+  }
+  label {
+    @apply absolute end-5 font-extralight cursor-text;
+  }
+
+  &.edit {
+    input {
+      @apply text-gray-600;
+    }
+    label {
+      @apply hidden;
+    }
+  }
+}

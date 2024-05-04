@@ -1,0 +1,49 @@
+.tree-nav {
+  @apply flex flex-col duration-100 ease-in gap-2;
+
+  li {
+    @apply flex flex-col ;
+
+    label {
+      @apply flex text-gray-600 text-sm font-medium p-3 rounded-md cursor-pointer items-center overflow-ellipsis whitespace-nowrap;
+
+      .link {
+        @apply flex  items-center;
+      }
+
+      &.selected {
+        @apply bg-white shadow-sm text-primary;
+      }
+
+      &:has(.toggle) {
+        @apply ps-1;
+      }
+
+      .icon {
+        @apply h-5 me-2 ;
+
+        &.toggle {
+          @apply w-3 me-1 stroke-2 text-gray-950;
+        }
+      }
+    }
+
+    &:hover label {
+        @apply bg-white shadow-sm;
+    }
+
+    & > .tree-nav {
+      @apply flex flex-col max-h-0 overflow-hidden;
+    }
+
+    &.open {
+      & > .tree-nav {
+        @apply max-h-64;
+
+        li label {
+          @apply ps-6;
+        }
+      }
+    }
+  }
+}
