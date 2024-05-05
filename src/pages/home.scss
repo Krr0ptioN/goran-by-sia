@@ -31,6 +31,9 @@
                 label { @apply text-sm mx-2; }
                 .icon { @apply h-3 stroke-2 me-2;}
             }
+
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
         }
 
         .main-sidebar-footer {
@@ -39,26 +42,4 @@
             button { @apply w-full justify-start px-1 text-zinc-600 hover:text-zinc-900; }
         }
     }
-}
-
-
-progress {
-    color: darkmagenta;
-    /* Firefox: Unfilled portion of the progress bar */
-    background: lightgrey;
-}
-
-/* Firefox: Filled portion of the progress bar */
-progress::-moz-progress-bar {
-    background: currentColor;
-}
-
-/* Chrome & Safari: Unfilled portion of the progress bar */
-progress::-webkit-progress-bar {
-    background: lightgrey;
-}
-
-/* Chrome & Safari: Filled portion of the progress bar */
-progress::-webkit-progress-value {
-    background: currentColor;
 }

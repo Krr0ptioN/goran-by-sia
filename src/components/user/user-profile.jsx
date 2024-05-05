@@ -1,16 +1,14 @@
-import UserAvatar from '@/components/user/avatar'
-import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid'
 import './user-profile.scss'
+import { useGetUserProfileQuery } from '@/services/api/auth'
+import Icon from '../icon'
 
-export default function UserProfileMenu({ name, email }) {
+export default function UserProfileMenu() {
+  const { data: user, isLoading } = useGetUserProfileQuery()
   return (
-    <div className="user-profile">
-      <UserAvatar />
-      <div className="info">
-        <strong>{name}</strong>
-        <small>{email}</small>
-      </div>
-      <EllipsisHorizontalIcon className="more icon" />
+    <div className="user-menu">
+      <img src={user?.profileImage} />
+      <label>{user?.username}</label>
+      <Icon name="ChevronDown" />
     </div>
   )
 }

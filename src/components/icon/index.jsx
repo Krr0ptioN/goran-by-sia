@@ -7,6 +7,7 @@ import {
   MapPinIcon as MapPin,
   ComputerDesktopIcon as ComputerDesktop,
   SpeakerWaveIcon as SpeakerWave,
+  SpeakerXMarkIcon as SpeakerXMark,
   BookmarkIcon as Bookmark,
   CalendarDaysIcon as CalendarDays,
   ChevronDownIcon as ChevronDown,
@@ -118,6 +119,7 @@ import {
   PlayIcon as SolidPlay,
   PlayCircleIcon as SolidPlayCircle,
   HomeIcon as SolidHome,
+  SpeakerXMarkIcon,
 } from '@heroicons/react/24/solid'
 
 const ICONS = {
@@ -149,6 +151,7 @@ const ICONS = {
   Truck,
   Cube,
   SpeakerWave,
+  SpeakerXMark,
   CubeTransparent,
   Language,
   ChevronDoubleRight,

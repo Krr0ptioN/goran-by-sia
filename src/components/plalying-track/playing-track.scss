@@ -1,0 +1,8 @@
+div.playing-track {
+    @apply flex items-center gap-2 ;
+    span {
+        @apply text-xs text-gray-500 w-12 ;
+        &.current  { @apply text-end; }
+    }
+    input.track { @apply flex-1; }
+}

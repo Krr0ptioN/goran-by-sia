@@ -1,5 +1,5 @@
 div.music-player {
-    @apply flex bg-white border-t p-6;
+    @apply flex bg-white border-t p-6 accent-primary;
 
     .album-art {
         @apply flex gap-2 items-center gap-2;
@@ -14,29 +14,15 @@ div.music-player {
         .icon { @apply h-5 mx-3; }
     }
 
-    progress { @apply appearance-none flex-1 h-1 rounded-full text-primary ; }
-
     .player {
         @apply flex flex-col flex-1 max-w-2xl mx-auto;
 
-        div.contorls {
-            @apply flex-1 flex items-center justify-center gap-5;
-            button { @apply p-0 rounded-full size-8 p-1; }
-            button.play {
-                @apply size-12 p-0;
-                .icon { @apply size-10; }
-            }
-        }
-
-        div.progress-bar {
-            @apply flex items-center gap-2 ;
-            span { @apply text-xs text-gray-500; }
-        }
+        div.player-contorls { @apply flex-1 ;}
     }
 
     .extra-controls {
         @apply flex items-center gap-0;
-        progress { @apply w-24 ms-2; }
+
         button { @apply p-0 size-8; }
         .icon { @apply stroke-2 stroke-gray-500; }
     }

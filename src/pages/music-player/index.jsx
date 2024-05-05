@@ -2,6 +2,10 @@ import React from 'react'
 import useCurrentPlaying from '@/hooks/current-song'
 import Icon from '@/components/icon'
 import Button from '@/components/button'
+import SpeakerControls from '@/components/speaker'
+import PlayingTrack from '@/components/plalying-track'
+import PlayerControls from '@/components/player-controls'
+
 import './music-player.scss'
 
 function AlbumArt({ albumArt, title, artist, favorite = false }) {
@@ -20,18 +24,8 @@ function AlbumArt({ albumArt, title, artist, favorite = false }) {
 function Player() {
   return (
     <div className="player">
-      <div className="contorls">
-        <Button icon="ArrowsRightLeft" />
-        <Button icon="ChevronLeft" />
-        <Button className="play" icon="SolidPlayCircle" />
-        <Button icon="ChevronRight" />
-        <Button icon="ArrowPath" />
-      </div>
-      <div className="progress-bar">
-        <span className="current">2:49</span>
-        <progress value={70} max={100} />
-        <span className="total">3:37</span>
-      </div>
+      <PlayerControls />
+      <PlayingTrack />
     </div>
   )
 }
@@ -45,8 +39,7 @@ export default function MusicPlayer() {
       <div className="extra-controls">
         <Button icon="Bars4" />
         <Button icon="ComputerDesktop" />
-        <Button icon="SpeakerWave" />
-        <progress value={90} max={100} />
+        <SpeakerControls />
       </div>
     </div>
   )

@@ -9,9 +9,9 @@ import SideBar from '@/components/side-bar'
 import { MainMenu, SecondaryMenu } from '@/pages/menu'
 import { Outlet, useLocation } from 'react-router-dom'
 import Spacer from '@/components/spacer'
-import Icon from '@/components/icon'
 import MusicPlayer from './music-player'
 import useCurrentUser from '@/hooks/current-user'
+import UserProfileMenu from '@/components/user/user-profile'
 
 import './home.scss'
 
@@ -23,15 +23,11 @@ function PageHeader() {
   return (
     <header className="page-header">
       <div className="nav">
-        <Button icon="ChevronLeft" className="icon" />
-        <Button icon="ChevronRight" className="icon" />
+        <Button icon="ChevronLeft" disabled className="icon" />
+        <Button icon="ChevronRight" disabled className="icon" />
       </div>
       <Spacer />
-      <div className="user-menu">
-        <img src={user.avatar} />
-        <label>{user.username}</label>
-        <Icon name="ChevronDown" />
-      </div>
+      <UserProfileMenu />
     </header>
   )
 }

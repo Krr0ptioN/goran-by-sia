@@ -6,15 +6,5 @@
     }
 
 
-    ul.music-list {
-        @apply flex gap-2 flex-wrap;
-        li {
-            @apply flex flex-col cursor-pointer bg-neutral-100 hover:bg-neutral-50 w-48 p-4;
-
-            h1 { @apply text-lg font-bold mt-2; }
-            span { @apply text-gray-500; }
-
-        }
-    }
 
 }
