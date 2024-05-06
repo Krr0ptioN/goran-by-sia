@@ -1,7 +1,7 @@
 
 @keyframes borderColor {
-  from { @apply border-neutral-100   }
-  to { @apply border-neutral-100/60  }
+  from { @apply border-neutral-100; }
+  to { @apply border-neutral-100/60 dark:border-primary/60; }
 }
 
 
@@ -13,7 +13,8 @@
   }
 
   .icon {
-    @apply text-neutral-100 bg-primary/90 size-10 rounded-full p-2 border-4 ;
+    @apply text-neutral-100 bg-primary/90 size-10 rounded-full p-2 border-4 dark:border-primary;
+
     animation: borderColor 1s infinite alternate;
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../button'
-import './player-controls.scss'
 import usePlayerTrack from '@/hooks/player-track'
+import './player-controls.scss'
 
 export default function PlayerControls() {
   const player = usePlayerTrack()

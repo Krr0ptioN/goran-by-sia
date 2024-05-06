@@ -1,8 +1,10 @@
 div.player-controls {
     @apply flex items-center justify-center gap-5;
-    button { @apply p-0 rounded-full size-8 p-1; }
+    button { @apply p-0 rounded-full size-8 p-1 dark:hover:bg-primary; }
     button.play {
         @apply size-12 p-0;
-        .icon { @apply size-10; }
+
+        .icon { @apply size-10 dark:fill-neutral-400; }
+        &:hover .icon { @apply dark:fill-neutral-300; }
     }
 }

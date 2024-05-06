@@ -1,12 +1,11 @@
 .home.page {
-    @apply flex flex-col overflow-hidden;
+    @apply flex flex-col overflow-hidden dark:text-neutral-100;
 
     > .content {
         @apply flex flex-row overflow-hidden flex-1;
         .outlet {
-            @apply flex flex-col flex-1 h-full w-full border-l overflow-auto bg-white;
-
-            .page {@apply bg-white;}
+            @apply flex flex-col flex-1 h-full w-full border-l dark:border-l-gray-600 dark:border-dotted overflow-auto bg-white dark:bg-gray-900;
+            .page {@apply bg-white dark:bg-gray-900;}
         }
 
         .page-header {
@@ -16,17 +15,17 @@
                 @apply flex gap-1;
 
                 button.icon {
-                    @apply rounded-full p-1 bg-neutral-100 items-center justify-center;
+                    @apply rounded-full p-1 bg-neutral-100 dark:bg-gray-300 items-center justify-center;
 
-                    &:hover { @apply bg-neutral-200; }
-                    &:active { @apply bg-neutral-300; }
+                    &:hover { @apply bg-neutral-200 dark:bg-gray-200; }
+                    &:active { @apply bg-neutral-300 dark:bg-gray-300; }
 
                     .icon { @apply h-5 stroke-[1.5]; }
                 }
             }
 
             > div.user-menu {
-                @apply h-6 flex bg-neutral-100 items-center rounded-full;
+                @apply h-6 flex bg-neutral-100 dark:bg-neutral-600 items-center rounded-full;
                 img   { @apply h-6 rounded-full; }
                 label { @apply text-sm mx-2; }
                 .icon { @apply h-3 stroke-2 me-2;}

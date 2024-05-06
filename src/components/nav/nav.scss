@@ -5,14 +5,14 @@
     @apply flex flex-col ;
 
     label {
-      @apply flex text-gray-600 text-sm font-medium p-3 rounded-md cursor-pointer items-center overflow-ellipsis whitespace-nowrap;
+      @apply flex text-gray-600 dark:text-neutral-100 text-sm font-medium p-3 rounded-md cursor-pointer items-center overflow-ellipsis whitespace-nowrap;
 
       .link {
-        @apply flex  items-center;
+        @apply flex items-center;
       }
 
       &.selected {
-        @apply bg-white shadow-sm text-primary;
+        @apply bg-white shadow-sm text-primary dark:bg-zinc-800;
       }
 
       &:has(.toggle) {
@@ -29,7 +29,7 @@
     }
 
     &:hover label {
-        @apply bg-white shadow-sm;
+        @apply bg-white shadow-sm dark:bg-zinc-700;
     }
 
     & > .tree-nav {
