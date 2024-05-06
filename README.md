@@ -1,5 +1,3 @@
-## React App Template
+## Goran ;
 
-- Tailwind
-- React
-- ParcelJS
+- Music Player UI
