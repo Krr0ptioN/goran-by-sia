@@ -17,6 +17,7 @@ export default function Button({
     <button
       type="button"
       className={classNames('button', className, { disabled: !!disabled })}
+      disabled={disabled ? 'disabled' : undefined}
       {...rest}
     >
       <Icon name={icon} />

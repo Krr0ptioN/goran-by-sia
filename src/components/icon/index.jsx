@@ -118,6 +118,7 @@ import {
   HeartIcon as SolidHeart,
   PlayIcon as SolidPlay,
   PlayCircleIcon as SolidPlayCircle,
+  PauseCircleIcon as SolidPauseCircle,
   HomeIcon as SolidHome,
   SpeakerXMarkIcon,
 } from '@heroicons/react/24/solid'
@@ -126,6 +127,7 @@ const ICONS = {
   Link,
   SolidHome,
   SolidPlayCircle,
+  SolidPauseCircle,
   Printer,
   RectangleStack,
   Pencil,

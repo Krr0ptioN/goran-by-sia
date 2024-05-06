@@ -3,23 +3,18 @@ const { createSlice } = require('@reduxjs/toolkit')
 export const playerSlice = createSlice({
   name: 'player',
   initialState: {
-    current: {
-      id: 'ab67616d00001e02ff9ca10b55ce82ae553c8228',
-      artist: 'Gelawêj',
-      title: 'Kotre Spî',
-      albumArt:
-        'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228',
-      media:
-        'http://localhost:3000/media/cae9729f-fc1c-4c74-bb8b-012edb4fb9da.mp3',
-      size: 240,
-    },
+    current: {},
     playing: false,
-    track: 150,
+    track: 0,
+    size: 0,
     volume: 80,
     muted: false,
   },
 
   reducers: {
+    mediaSizeChanged(state, action) {
+      state.size = action.payload
+    },
     muteToggled(state) {
       state.muted = !state.muted
     },
@@ -30,13 +25,22 @@ export const playerSlice = createSlice({
     currentChanged(state, action) {
       state.current = action.payload
       state.track = 0
-      state.play = true
+      state.playing = true
     },
     playToggled(state) {
       state.playing = !state.playing
     },
     trackMoved(state, action) {
-      state.track = Math.min(state.current.size, action.payload)
+      state.track = Math.min(state.size, action.payload)
+    },
+    timeUpdated(state, action) {
+      state.track = Math.min(state.size, action.payload)
+    },
+    paused(state) {
+      state.playing = false
+    },
+    played(state) {
+      state.playing = true
     },
   },
 })
@@ -46,5 +50,9 @@ export const {
   volumedChanged,
   currentChanged,
   playToggled,
+  timeUpdated,
   trackMoved,
+  mediaSizeChanged,
+  paused,
+  played,
 } = playerSlice.actions

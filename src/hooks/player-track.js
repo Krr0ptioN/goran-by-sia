@@ -1,4 +1,4 @@
-import { trackMoved } from '@/services/player'
+import { playToggled, trackMoved } from '@/services/player'
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -7,9 +7,14 @@ export default function usePlayerTrack() {
   const dispatch = useDispatch()
 
   const move = useCallback((value) => dispatch(trackMoved(value)), [dispatch])
+  const toggle = useCallback(() => dispatch(playToggled()), [dispatch])
+
   return {
-    size: player.current?.size,
+    active: !!player.current.media,
+    playing: player.playing,
+    size: player.size,
     value: player.track,
     move,
+    toggle,
   }
 }
