@@ -6,7 +6,9 @@
   "author": "Siamand <me@siamand.cc>",
   "license": "MIT",
   "staticFiles": {
-    "staticPath": ["./src/assets"],
+    "staticPath": [
+      "./src/assets"
+    ],
     "watcherGlob": "**"
   },
   "devDependencies": {
