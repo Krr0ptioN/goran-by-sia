@@ -1,9 +1,0 @@
-{
-    "files.exclude": [
-        ".DS_Store",
-        ".git",
-        "node_modules",
-        "dist",
-        ".parcel-cache"
-    ],
-}
