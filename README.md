@@ -1,3 +1,3 @@
-## Goran ;
+## Goran
 
 - Music Player UI
