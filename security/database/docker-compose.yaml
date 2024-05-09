@@ -1,0 +1,26 @@
+version: "3.4"
+
+services:
+  mymongo:
+    container_name: security-db
+    environment:
+      - MONGO_INITDB_DATABASE=admin
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=YOURPASSWORD
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-database:./data
+
+  post.api:
+    container_name: post.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DatabaseSettings__ConnectionString=mongodb://root:YOURPASSWORD@mymongodb:27017
+    ports:
+      - "5010:80"
+
+volumes:
+  mongo-database:
+    external: false
