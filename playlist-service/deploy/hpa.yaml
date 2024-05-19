@@ -1,0 +1,15 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: playlist-hpa
+  namespace: default
+  labels:
+    application: playlist-service
+spec:
+  minReplicas: 3
+  maxReplicas: 12
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: playlist-deployment
+  targetCPUUtilizationPercentage: 80

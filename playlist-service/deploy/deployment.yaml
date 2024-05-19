@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  name: playlist-api-deployment
+  labels:
+    app: playlist-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: playlist-api
+  template:
+    metadata:
+      labels:
+        app: playlist-api
+    spec:
+      containers:
+        - name: playlist-app
+          image: "TODO: add docker image"
+          ports:
+            - containerPort: 8080
+          env:
+            - name: APP_DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: data-secrets
+                  key: password
