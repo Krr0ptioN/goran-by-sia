@@ -24,7 +24,7 @@ div.music-player {
         @apply flex items-center gap-0;
 
         button { @apply p-0 size-8 dark:hover:bg-primary; }
-        .icon { @apply stroke-2 stroke-gray-100 dark:stroke-neutral-300; }
+        .icon { @apply stroke-1 stroke-gray-500 dark:stroke-neutral-300; }
     }
 
 }
