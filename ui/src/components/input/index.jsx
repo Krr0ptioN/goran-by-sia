@@ -1,6 +1,4 @@
 import classNames from 'classnames'
-import React, { useMemo, useState } from 'react'
-import { EUR } from '@/services/currency'
 import './input.scss'
 
 export default function Input({ className, type, ...props }) {
@@ -66,24 +64,5 @@ export function PasswordInput({ className, value, onChange, ...props }) {
       className={className}
       {...props}
     />
-  )
-}
-
-export function MoneyInput({ className, value, onChange, Currency = EUR }) {
-  const [edit, setEdit] = useState(false)
-  const id = useMemo(() => 'txt_' + Math.random().toString(16), [])
-
-  return (
-    <div className={classNames('money-input', className, { edit })}>
-      <TextInput
-        id={id}
-        type="money"
-        value={value}
-        onChange={onChange}
-        onFocus={(_) => setEdit(true)}
-        onBlur={(_) => setEdit(false)}
-      />
-      <label htmlFor={id}>{Currency.format(value)}</label>
-    </div>
   )
 }

@@ -1,9 +1,7 @@
 const TwentyFourHours = 86_400;
 
 module.exports = {
-  DATABASE: "127.0.0.1:27017",
-  DATABASE_USER: "root",
-  DATABASE_PASS: "YOURPASSWORD",
+  DATABASE: "mongodb://admin:admin@localhost:27017/security",
   SECRET: "salt-and-peper!!",
   TOKEN_EXPIRY: TwentyFourHours,
 };

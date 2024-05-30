@@ -8,4 +8,8 @@ app.get("/api/playlists/recently-played", (req, res) =>
 );
 app.get("/api/playlists/", (req, res) => res.json(playlists));
 
-app.listen(4001);
+app.listen(4001, () => {
+  console.clear();
+  console.log("## Playlist Service");
+  console.log("http://localhost:4001");
+});

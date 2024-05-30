@@ -1,26 +1,50 @@
-version: "3.4"
+version: "3.6"
+# Deploys MongoDB with customization scripts and container with Mongo client
+# https://fabianlee.org/2018/05/20/docker-using-docker-compose-to-link-a-mongodb-server-and-client/
+#
+# usage:
+# sudo docker-compose build
+# sudo docker-compose up
 
 services:
-  mymongo:
-    container_name: security-db
-    environment:
-      - MONGO_INITDB_DATABASE=admin
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=YOURPASSWORD
-    restart: unless-stopped
+  my-mongodb:
+    image: mongo:4.2.3-bionic
+    container_name: my-mongodb
     ports:
-      - "27017:27017"
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=test
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
     volumes:
-      - mongo-database:./data
+      # seeding scripts
+      - ./mongo-entrypoint:/docker-entrypoint-initdb.d
+      # named volumes
+      - mongodb:/data/db
+      - mongoconfig:/data/configdb
+    networks:
+      - mongo_net
 
-  post.api:
-    container_name: post.api
+  my-mongoclient:
+    # build will get tagged with 'image'
+    build: ./my-mongoclient
+    image: fabianlee/my-mongoclient:3.9
+    container_name: my-mongoclient
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - DatabaseSettings__ConnectionString=mongodb://root:YOURPASSWORD@mymongodb:27017
-    ports:
-      - "5010:80"
+      - MONGO_SERVER=my-mongodb
+      - MONGO_INITDB_DATABASE=test
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    networks:
+      - mongo_net
+    depends_on:
+      - my-mongodb
 
 volumes:
-  mongo-database:
-    external: false
+  # default dir on Ubuntu: /var/lib/docker/volumes
+  mongodb: null
+  mongoconfig: null
+
+networks:
+  mongo_net:
+    driver: bridge

@@ -91,7 +91,7 @@ body,
 }
 
 div.page {
-    @apply bg-neutral-100 w-full flex flex-col;
+    @apply bg-neutral-100 dark:bg-gray-700 w-full flex flex-col;
 }
 
 code {

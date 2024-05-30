@@ -12,25 +12,49 @@ router.use(bodyParser.json());
 
 const User = require("./user-entity");
 
+User.exists({ username: "admin" }).then((u) => {
+  if (!u) {
+    User.create({
+      username: "admin",
+      name: "Sia",
+      email: "admin@goran.cc",
+      password: bcrypt.hashSync("admin", 8),
+    })
+      .then((result) => {
+        console.log(result);
+        console.log("User created!");
+      })
+      .catch((e) => console.error(e));
+  } else {
+    console.log("Admin user already exists!");
+  }
+});
+
 router.post("/login", function (req, res) {
-  User.findOne({ email: req.body.email }, function (err, user) {
-    if (err) return res.status(500).send("Error on the server.");
-    if (!user) return res.status(404).send("No user found.");
+  const username = req.body.username;
+  const password = req.body.password;
 
-    const passwordIsValid = bcrypt.compareSync(
-      req.body.password,
-      user.password,
-    );
-    if (!passwordIsValid) {
-      return res.status(401).send({ auth: false, token: null });
-    }
+  User.findOne({ username })
+    .then((user) => {
+      if (!user)
+        return res.status(401).send({ message: "Invalid credentials" });
 
-    const token = jwt.sign({ id: user._id }, config.SECRET, {
-      expiresIn: config.TOKEN_EXPIRY,
-    });
-
-    res.status(200).send({ auth: true, token: token });
-  });
+      const passwordIsValid = bcrypt.compareSync(password, user?.password);
+      if (!passwordIsValid) {
+        res.status(401).send("Invalid credentials");
+      } else {
+        const token = jwt.sign({ id: user._id }, config.SECRET, {
+          expiresIn: config.TOKEN_EXPIRY,
+        });
+        res.status(200).send({
+          username,
+          name: user.name,
+          email: user.email,
+          token: token,
+        });
+      }
+    })
+    .catch((_) => res.status(500).send({ message: "Error on the server." }));
 });
 
 router.get("/logout", (req, res) =>
@@ -40,35 +64,44 @@ router.get("/logout", (req, res) =>
 router.post("/register", function (req, res) {
   const hashedPassword = bcrypt.hashSync(req.body.password, 8);
 
-  User.create(
-    {
-      name: req.body.name,
-      email: req.body.email,
-      password: hashedPassword,
-    },
-    function (err, user) {
-      if (err) {
-        return res
-          .status(500)
-          .send("There was a problem registering the user`.");
-      }
+  User.exists({ username: req.body.username }).then((doesExists) => {
+    if (!doesExists) {
+      User.create(
+        {
+          username: req.body.username,
+          name: req.body.name,
+          email: req.body.email,
+          password: hashedPassword,
+        },
+        function (err, user) {
+          if (err) {
+            return res
+              .status(500)
+              .send({ message: "There was a problem registering the user." });
+          }
 
-      const token = jwt.sign({ id: user._id }, config.SECRET, {
-        expiresIn: config.TOKEN_EXPIRY,
-      });
+          const token = jwt.sign({ id: user._id }, config.SECRET, {
+            expiresIn: config.TOKEN_EXPIRY,
+          });
 
-      res.status(200).send({ auth: true, token: token });
-    },
-  );
+          res.status(200).send({ auth: true, token: token });
+        },
+      );
+    } else {
+      res.status(209).send({ message: "already exists" });
+    }
+  });
 });
 
 router.get("/me", VerifyToken, function (req, res, next) {
   User.findById(req.userId, { password: 0 }, function (err, user) {
     if (err) {
-      return res.status(500).send("There was a problem finding the user.");
+      return res
+        .status(500)
+        .send({ message: "There was a problem finding the user." });
     }
     if (!user) {
-      return res.status(404).send("No user found.");
+      return res.status(404).send({ message: "No user found." });
     }
     res.status(200).send(user);
   });

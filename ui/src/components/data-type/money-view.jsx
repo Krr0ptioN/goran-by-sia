@@ -1,4 +1,4 @@
-import { EUR, EUR_ACCOUNTING } from '@/services/currency'
+
 import classNames from 'classnames'
 import './money-view.scss'
 
