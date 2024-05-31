@@ -41,59 +41,51 @@ Ensure you have the following installed:
    cd security/database
    docker-compose up
 
-
-```sh
-cd security/database
-docker-compose up
-```
-
 2. **Start Security Service**
 Navigate to the `security` directory and start the security service.
 
 
-```sh
-cd security/
-yarn start
-```
+    ```sh
+    cd security/
+    yarn start
+    ```
 
 3. **Start File Service**
 Navigate to the `file-service` directory and start the file service.
 
-```sh
-cd file-service/
-yarn start
-```
+    ```sh
+    cd file-service/
+    yarn start
+    ```
 
 4. **Start Playlist Service**
 Navigate to the `playlist-service` directory and start the playlist service.
 
 
-```sh
-cd playlist-service/
-yarn start
-```
+    ```sh
+    cd playlist-service/
+    yarn start
+    ```
 
 5. **Start the Web Interface**
 Navigate to the `ui` directory and start the web interface.
 
-```sh
-cd ui/
-yarn start
-```
+    ```sh
+    cd ui/
+    yarn start
+    ```
 
 6. **Start the Gateway Service**
 Navigate to the gateway directory and start the gateway service.
 
-```sh
-cd gateway/
-yarn start
-```
+    ```sh
+    cd gateway/
+    yarn start
+    ```
 
 7. **Access the Application:**
-
-Open your web browser and navigate to http://localhost:8080
-
-
-Use `admin` for both the username and password to log in.
+    
+    Open your web browser and navigate to http://localhost:8080
+    Use `admin` for both the username and password to log in.
 
 By following these instructions, you should be able to run the Goran music streaming service locally on your machine. Enjoy exploring Kurdish music with Goran!
