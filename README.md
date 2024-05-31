@@ -20,6 +20,20 @@ Goran is composed of several microservices, each serving a distinct purpose with
 - **Playlist Service**: Manages user playlists and related functionalities.
 - **Web Interface**: Provides the user interface for interacting with the service.
 
+Ideally, some of those services would be replaced (e.g. the Gatway will be replaced by k8s ingress).
+
+
+```mermaid
+graph TD;
+    A((User)) -->|Login / Stream| B[K8s Ingress]
+    B --> C{{Security Service}}
+    B --> D{{File Service}} --> K[\ Media files<br /> Bucket/]
+    B --> E{{Playlist Service}}
+    B --> F[Web Interface] --> SX[\Staic files <br /> Bucket/]
+    C --> G1[(Security<br/>DB)]
+    E --> G2[(Library<br/>DB)]
+```
+
 ## How to Run Locally
 
 To run Goran locally, follow these steps:
