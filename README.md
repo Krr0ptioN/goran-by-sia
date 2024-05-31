@@ -53,3 +53,14 @@ yarn start
 7. navigate to http://localhost:8080
 
 use `admin` for user and password.
+
+
+## Screen shots
+
+#### Light-Mode
+
+Login Page:
+<img src="./docs/login-page.jpg" >
+
+Home Page:
+<img src="./docs/home-page.jpg" >

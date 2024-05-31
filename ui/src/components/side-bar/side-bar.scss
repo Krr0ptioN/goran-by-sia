@@ -2,7 +2,6 @@ aside.side-bar {
   @apply flex flex-col items-center bg-neutral-100 text-gray-400 w-0 overflow-y-scroll h-full duration-1000 overflow-x-clip;
   @apply dark:text-neutral-100 dark:bg-gray-900;
 
-
   .tree-nav,
   .logo {
     @apply min-w-max;
@@ -15,11 +14,23 @@ aside.side-bar {
   .tree-nav {
     @apply w-72 -mx-4 px-4;
   }
-  .distance { @apply h-8; }
+  .distance {
+    @apply h-8;
+  }
 
-  > a  { @apply border-t border-dotted dark:border-t-neutral-700 my-3 py-1 min-w-max px-6 text-sm font-extralight ; }
+  > a {
+    @apply border-t border-dotted dark:border-t-neutral-700 my-3 py-5 min-w-max px-6 text-sm font-extralight;
+  }
 
   &.open {
     @apply w-72 -left-72;
+  }
+
+  .watermark {
+    @apply grid grid-cols-4 gap-3 h-32   mt-auto relative rotate-[15deg] text-primary/5 dark:text-primary/50;
+
+    .illustration {
+      @apply size-12 mt-auto;
+    }
   }
 }

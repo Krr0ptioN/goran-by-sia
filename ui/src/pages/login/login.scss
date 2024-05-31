@@ -1,28 +1,43 @@
 .page.login-page {
-  @apply flex flex-col items-center justify-center bg-black;
+  @apply flex flex-row gap-12 items-center justify-center bg-rose-950/5 dark:bg-black;
 
   .kurd-line {
-    @apply fixed top-0 bottom-0 w-12 left-32 bg-cover z-0;
-    background-image: url('./line.png');
-    background-size: 60px;
-    background-position: center;
+    @apply flex flex-col gap-12 text-primary/10 dark:text-primary/30 mr-12;
+
+    .illustration {
+      @apply flex size-12;
+      &.kurdi-2 {
+        @apply dark:text-primary/40 mr-12;
+      }
+      &.kurdi-3 {
+        @apply dark:text-primary/60 mr-12;
+      }
+    }
+  }
+
+  img {
+    @apply w-96 object-cover;
   }
 
   .content {
-    @apply flex max-w-3xl bg-white rounded-lg shadow-xl divide-x overflow-clip z-50;
+    @apply flex max-w-3xl rounded-lg shadow-xl divide-x overflow-clip z-50 border dark:border-0;
 
-    .illustration {
-      @apply w-full px-12 text-primary;
-    }
     .login-form {
-      @apply flex flex-col w-full gap-2 px-12 h-full justify-center  bg-neutral-100;
+      @apply flex flex-col w-full gap-2 pt-12 px-12 h-full justify-center bg-neutral-100;
+      @apply dark:bg-neutral-800 dark:text-white;
+
       input {
         @apply p-3 border-2 border-primary;
       }
 
-      a {
-        @apply hover:underline text-gray-800 hover:text-primary;
+      .logo {
+        @apply w-full justify-start px-0;
       }
+
+      a {
+        @apply hover:underline text-gray-800 dark:text-neutral-400 hover:text-primary;
+      }
+
       p.register {
         @apply text-sm;
         a {
@@ -30,8 +45,15 @@
         }
       }
       button {
-        @apply mt-3;
+        @apply mt-6;
       }
+    }
+  }
+
+  > footer {
+    @apply fixed bottom-0 text-xs text-rose-950/50 dark:text-neutral-700 p-6;
+    a {
+      @apply italic hover:underline;
     }
   }
 }

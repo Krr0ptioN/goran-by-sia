@@ -1,4 +1,5 @@
 import Logo from '@/components/logo'
+import { KurdishSymbolA, KurdishSymbolD } from '../symbol'
 
 import classNames from 'classnames'
 
@@ -13,6 +14,22 @@ export default function SideBar({ children }) {
         <Logo />
       </header>
       {children}
+      <div className="watermark">
+        <KurdishSymbolA />
+        <KurdishSymbolA />
+        <KurdishSymbolA />
+        <KurdishSymbolA />
+
+        <KurdishSymbolD />
+        <KurdishSymbolD />
+        <KurdishSymbolD />
+        <KurdishSymbolD />
+
+        <KurdishSymbolA />
+        <KurdishSymbolA />
+        <KurdishSymbolA />
+        <KurdishSymbolA />
+      </div>
     </aside>
   )
 }

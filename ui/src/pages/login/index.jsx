@@ -1,25 +1,44 @@
 import { PasswordInput, TextInput } from '@/components/input'
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import Logo from '@/components/logo'
 import Button from '@/components/button'
-import MusicIllustration from '@/components/illustration/music'
 import { useLoginMutation } from '@/services/api/auth'
+import LoginImage from './login.jpg'
+import {
+  KurdishSymbolA,
+  KurdishSymbolB,
+  KurdishSymbolC,
+} from '@/components/symbol'
 
 import './login.scss'
+
+function Tripple() {
+  return (
+    <Fragment>
+      <KurdishSymbolA />
+      <KurdishSymbolB />
+      <KurdishSymbolC />
+    </Fragment>
+  )
+}
 
 export default function LoginPage() {
   const [form, setForm] = useState({ username: '', password: '' })
   const [login, result] = useLoginMutation()
 
   useEffect(() => {
-    if(result?.data?.token) {
-      location= '/'
+    if (result?.data?.token) {
+      location = '/'
     }
   }, [result])
 
   return (
     <div className="page login-page">
-      <aside className="kurd-line" />
+      <aside className="kurd-line">
+        <Tripple />
+        <Tripple />
+        <Tripple />
+      </aside>
       <div className="content">
         <form className="login-form">
           <Logo className="large" />
@@ -56,8 +75,14 @@ export default function LoginPage() {
           </p>
           <br />
         </form>
-        <MusicIllustration />
+        <img src={LoginImage} />
       </div>
+
+      <footer>
+        &copy; Hemû mafêk bo
+        <a href="https://samalstudios.com"> https://samalstudios.com </a>
+        parastirawe.
+      </footer>
     </div>
   )
 }
