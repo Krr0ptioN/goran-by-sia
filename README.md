@@ -26,10 +26,10 @@ Ideally, some of those services would be replaced (e.g. the Gatway will be repla
 ```mermaid
 graph TD;
     A((User)) -->|Login / Stream| B[K8s Ingress]
-    B --> C{{Security Service}}
-    B --> D{{File Service}} --> K[\ Media files<br /> Bucket/]
-    B --> E{{Playlist Service}}
-    B --> F[Web Interface] --> SX[\Staic files <br /> Bucket/]
+    B --> |/api/auth/.*|C{{Security Service}}
+    B --> |/media/.*<br/>/profiles/.*|D{{File Service}} --> K[\ Media files<br /> Bucket/]
+    B --> |/api/playlist/.*|E{{Playlist Service}}
+    B --> |/.*|F[Web Interface] --> SX[\Staic files <br /> Bucket/]
     C --> G1[(Security<br/>DB)]
     E --> G2[(Library<br/>DB)]
 ```
