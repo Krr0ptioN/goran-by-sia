@@ -1,64 +1,99 @@
-## Goran
+# Goran
 
-Streaming Service
+**A Kurdish Music Streaming Service**
 
-#### Light-Mode
+## Light-Mode Screenshots
 
-Login Page:
-<img src="./docs/login-page.jpg" >
+**Login Page:**
+![Login Page](./docs/login-page.jpg)
 
-Home Page:
-<img src="./docs/home-page.jpg" >
+**Home Page:**
+![Home Page](./docs/home-page.jpg)
 
-## Microservices:
+## Microservices Architecture
 
-- Api Gateway
-- Security
-- File Service
-- Playlist service
-- Web Interface
+Goran is composed of several microservices, each serving a distinct purpose within the application:
 
-## How to Run locally
+- **Gateway**: Manages and routes requests to the appropriate microservices.
+- **Security**: Handles authentication and authorization.
+- **File Service**: Manages music files and metadata.
+- **Playlist Service**: Manages user playlists and related functionalities.
+- **Web Interface**: Provides the user interface for interacting with the service.
 
-1. Start a mongodb database server for Security service
+## How to Run Locally
+
+To run Goran locally, follow these steps:
+
+### Prerequisites
+
+Ensure you have the following installed:
+- Docker
+- Yarn
+- Node.js
+
+### Steps
+
+1. **Start the MongoDB Database Server for the Security Service:**
+
+   Navigate to the `security/database` directory and start the MongoDB database using Docker Compose.
+
+   ```sh
+   cd security/database
+   docker-compose up
+
 
 ```sh
 cd security/database
 docker-compose up
 ```
 
-2. start security service
+2. **Start Security Service**
+Navigate to the `security` directory and start the security service.
+
+
 ```sh
 cd security/
 yarn start
 ```
 
-3. start file service
+3. **Start File Service**
+Navigate to the `file-service` directory and start the file service.
+
 ```sh
 cd file-service/
 yarn start
 ```
 
-4. start playlist service
+4. **Start Playlist Service**
+Navigate to the `playlist-service` directory and start the playlist service.
+
+
 ```sh
 cd playlist-service/
 yarn start
 ```
 
-5. start the web interface
+5. **Start the Web Interface**
+Navigate to the `ui` directory and start the web interface.
+
 ```sh
 cd ui/
 yarn start
 ```
 
-6. start the gateway service
+6. **Start the Gateway Service**
+Navigate to the gateway directory and start the gateway service.
 
 ```sh
 cd gateway/
 yarn start
 ```
 
-7. navigate to http://localhost:8080
+7. **Access the Application:**
 
-use `admin` for user and password.
- 
+Open your web browser and navigate to http://localhost:8080
+
+
+Use `admin` for both the username and password to log in.
+
+By following these instructions, you should be able to run the Goran music streaming service locally on your machine. Enjoy exploring Kurdish music with Goran!
