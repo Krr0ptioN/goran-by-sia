@@ -41,63 +41,29 @@ To run Goran locally, follow these steps:
 ### Prerequisites
 
 Ensure you have the following installed:
-- Docker
-- Yarn
+- Docker & docker-compose
+- Yarn / npm
 - Node.js
 
 ### Steps
 
-1. **Start the MongoDB Database Server for the Security Service:**
+1. Install
 
-   Navigate to the `security-service/database` directory and start the MongoDB database using Docker Compose.
+   Execute the following command
 
    ```sh
-   cd security/database
-   docker-compose up
+   yarn install
+   ```
 
-2. **Start Security Service**
-Navigate to the `security-service` directory and start the security service.
+2. **Start all the Services**
 
+Execute the following command
 
     ```sh
-    cd security-service/
     yarn start
     ```
 
-3. **Start File Service**
-Navigate to the `file-service` directory and start the file service.
-
-    ```sh
-    cd file-service/
-    yarn start
-    ```
-
-4. **Start Playlist Service**
-Navigate to the `playlist-service` directory and start the playlist service.
-
-
-    ```sh
-    cd playlist-service/
-    yarn start
-    ```
-
-5. **Start the Web Interface**
-Navigate to the `web` directory and start the web interface.
-
-    ```sh
-    cd web/
-    yarn start
-    ```
-
-6. **Start the Gateway Service**
-Navigate to the gateway directory and start the gateway service.
-
-    ```sh
-    cd gateway/
-    yarn start
-    ```
-
-7. **Access the Application:**
+3. **Access the Application:**
 
     Open your web browser and navigate to http://localhost:8080
     Use `admin` for both the username and password to log in.

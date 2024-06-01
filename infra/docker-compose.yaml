@@ -10,6 +10,8 @@ services:
   my-mongodb:
     image: mongo:4.2.3-bionic
     container_name: my-mongodb
+    logging:
+      driver: none
     ports:
       - 27017:27017
     environment:
@@ -30,6 +32,8 @@ services:
     build: ./my-mongoclient
     image: fabianlee/my-mongoclient:3.9
     container_name: my-mongoclient
+    logging:
+      driver: none
     environment:
       - MONGO_SERVER=my-mongodb
       - MONGO_INITDB_DATABASE=test

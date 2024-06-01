@@ -4,6 +4,9 @@
     "express-http-proxy": "^2.0.0",
     "jsonwebtoken": "^9.0.2"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "type": "module",
   "presets": [
     "es2015",
