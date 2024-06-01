@@ -49,18 +49,18 @@ Ensure you have the following installed:
 
 1. **Start the MongoDB Database Server for the Security Service:**
 
-   Navigate to the `security/database` directory and start the MongoDB database using Docker Compose.
+   Navigate to the `security-service/database` directory and start the MongoDB database using Docker Compose.
 
    ```sh
    cd security/database
    docker-compose up
 
 2. **Start Security Service**
-Navigate to the `security` directory and start the security service.
+Navigate to the `security-service` directory and start the security service.
 
 
     ```sh
-    cd security/
+    cd security-service/
     yarn start
     ```
 
@@ -82,10 +82,10 @@ Navigate to the `playlist-service` directory and start the playlist service.
     ```
 
 5. **Start the Web Interface**
-Navigate to the `ui` directory and start the web interface.
+Navigate to the `web` directory and start the web interface.
 
     ```sh
-    cd ui/
+    cd web/
     yarn start
     ```
 
@@ -98,7 +98,7 @@ Navigate to the gateway directory and start the gateway service.
     ```
 
 7. **Access the Application:**
-    
+
     Open your web browser and navigate to http://localhost:8080
     Use `admin` for both the username and password to log in.
 
