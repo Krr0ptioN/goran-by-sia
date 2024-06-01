@@ -57,7 +57,7 @@ Ensure you have the following installed:
 
 2. **Start all the Services**
 
-Execute the following command
+    Execute the following command
 
     ```sh
     yarn start
