@@ -4,6 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "docker-compose --verbose up"
+    "start": "docker-compose up"
   }
 }

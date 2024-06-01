@@ -1,17 +1,16 @@
 {
   "short_name": "Goran",
-  "name": "Goran Muzîk",
-  "icons": [
-    {
-      "src": "favicon.svg",
-      "type": "image/svg+xml",
-      "sizes": "512x512"
-    }
-  ],
+  "name": "Goran",
   "start_url": "/?source=pwa",
-  "background_color": "#000000",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#000000",
-  "description": "Kurdish Music streaming"
+  "description": "Kurdish Muzîk Platform",
+  "theme_color": "#fafafa",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
 }
